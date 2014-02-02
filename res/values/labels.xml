@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="value_label">Wert:</string>
+    <string name="year_label">Jahr:</string>
+    <string name="country_label">Land:</string>
+    <string name="letter_label">Buchstabe:</string>
+    <string name="commemorative_label">Sondermünze:</string>
+    <string name="submit_search_button">Suchen</string>
+
+</resources>

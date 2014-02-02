@@ -1,8 +1,119 @@
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-</android.support.v4.view.ViewPager>
+    <TextView
+        android:id="@+id/valueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/value_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/valueEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/valueText"
+        android:layout_alignBottom="@+id/valueText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/yearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valueEdit"
+        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/valueText"
+        android:text="@string/year_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/yearEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yearText"
+        android:layout_alignBottom="@+id/yearText"
+        android:layout_alignLeft="@+id/valueEdit"
+        android:layout_marginRight="25dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/countryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yearEdit"
+        android:layout_alignLeft="@+id/valueText"
+        android:layout_marginTop="25dp"
+        android:text="@string/country_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/countrySpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/yearEdit"
+        android:layout_alignRight="@+id/yearEdit"
+        android:layout_marginRight="25dp"
+        android:layout_alignTop="@+id/countryText" />
+
+    <TextView
+        android:id="@+id/letterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countrySpinner"
+        android:layout_alignLeft="@+id/valueText"
+        android:layout_marginTop="25dp"
+        android:text="@string/letter_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/letterEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/letterText"
+        android:layout_alignBottom="@+id/letterText"
+        android:layout_alignLeft="@+id/countrySpinner"
+        android:layout_alignRight="@+id/yearEdit"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/commemorativeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letterEdit"
+        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/valueText"
+        android:text="@string/commemorative_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Switch
+        android:id="@+id/commemorativeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/letterEdit"
+        android:layout_alignTop="@+id/commemorativeText"
+        android:checked="false"
+        android:textOff="Nein"
+        android:textOn="Ja" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commemorativeSwitch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="@string/submit_search_button" />
+
+</RelativeLayout>
